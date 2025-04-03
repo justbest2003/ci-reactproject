@@ -1,14 +1,14 @@
 import logo from "/Logo/logo.png";
-import Modal from "./Login/Modal";
-import { AuthContext } from "../context/AuthContext";
+import Modal from "../Login/Modal";
+import { AuthContext } from "../../context/AuthContext";
 import { useContext } from "react";
-import ProfileAndMenu from "./ProfileAndMenu";
+import UserMenu from "./UserProfileMenu";
 
-const Navbar = () => {
+const UserNavbar = () => {
   const { user } = useContext(AuthContext);
 
   return (
-    <div className="section-container navbar fixed top-0 left-1/2 transform -translate-x-1/2 w-full shadow-sm z-10 ">
+    <div className="section-container navbar bg-base-100 fixed top-0 left-1/2 transform -translate-x-1/2 w-full shadow-sm z-10 ">
       <div className="navbar-start">
         <div className="dropdown">
           {/* <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -80,7 +80,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-end gap-4">
         {user ? (
-          <ProfileAndMenu />
+          <UserMenu />
         ) : (
           <a
             className="btn-sign"
@@ -95,4 +95,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default UserNavbar;

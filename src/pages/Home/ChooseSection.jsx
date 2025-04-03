@@ -17,30 +17,27 @@ const ChooseSection = () => {
         <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-[18rem] w-full max-w-5xl">
           {/* ฝั่ง Want to Sell */}
           <div className="w-full md:w-1/2 flex flex-col items-center group">
-            <a href="/">
+            <a href="/shoppingpost">
               <img
                 src={WTS}
                 alt="WTS"
                 className="w-96 h-96 object-contain transition-all duration-300 ease-in-out group-hover:-translate-y-2"
               />
             </a>
-            <a href="/" className="btn-choices">
+
+            <a href="/shoppingpost" className="btn-choices">
               Want to Sell
             </a>
           </div>
 
           {/* ฝั่ง Want to Buy */}
           <div className="w-full md:w-1/2 flex flex-col items-center group">
-          <a href="/">
-              <img
-                src={WTB}
-                alt="WTB"
-                className="w-96 h-96 object-contain transition-all duration-300 ease-in-out group-hover:-translate-y-2"
-              />
-            </a>
-            <a href="/" className="btn-choices">
-              Want to Sell
-            </a>
+            <img
+              src={WTB}
+              alt="WTB"
+              className="w-96 h-96 object-contain transition-all duration-300 ease-in-out group-hover:-translate-y-2"
+            />
+            <button className="btn-choices">Want to Buy</button>
           </div>
         </div>
       </motion.div>

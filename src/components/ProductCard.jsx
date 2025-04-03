@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const ProductCard = ({ product }) => {
+
   return (
-    <div className="card bg-white shadow-lg flex flex-col h-full">
+    <div className="card shadow-lg flex flex-col h-full">
       {/* รูปสินค้า */}
       <figure className="relative">
         <img
@@ -22,14 +23,14 @@ const ProductCard = ({ product }) => {
       {/* รายละเอียดสินค้า */}
       <div className="card-body p-4 flex flex-col grow">
         {/* ชื่อสินค้า */}
-        <h3 className="text-sm font-semibold min-h-[48px] line-clamp-2">
+        <h3 className="text-sm font-extralight min-h-[48px] line-clamp-2">
           {product.productName}
         </h3>
 
         {/* ราคา */}
         <p className="text-lg font-bold text-gray-900 mt-auto">
           ฿ {product.price}
-        </p>  
+        </p>
       </div>
     </div>
   );

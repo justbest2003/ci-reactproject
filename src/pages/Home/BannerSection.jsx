@@ -11,7 +11,7 @@ import banner2 from "/Banner/banner2.png";
 
 const BannerSection = () => {
   return (
-    <div className="section-container pt-18">
+    <div className="section-container pt-28">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -23,7 +23,7 @@ const BannerSection = () => {
           clickable: true,
         }}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper max-w-[1280px] h-[400px] mx-auto rounded-lg"
+        className="mySwiper max-w-[1280px] h-[400px] rounded-lg"
       >
         <SwiperSlide>
           <img

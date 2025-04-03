@@ -1,10 +1,10 @@
 import logo from "/Logo/logo.png";
-import Modal from "./Login/Modal";
-import { AuthContext } from "../context/AuthContext";
+import Modal from "../Login/Modal";
+import { AuthContext } from "../../context/AuthContext";
 import { useContext } from "react";
-import ProfileAndMenu from "./ProfileAndMenu";
+import ModProfileMenu from "./ModProfileMenu";
 
-const Navbar = () => {
+const NavbarMod = () => {
   const { user } = useContext(AuthContext);
 
   return (
@@ -80,7 +80,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-end gap-4">
         {user ? (
-          <ProfileAndMenu />
+          <ModProfileMenu />
         ) : (
           <a
             className="btn-sign"
@@ -95,4 +95,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavbarMod;
